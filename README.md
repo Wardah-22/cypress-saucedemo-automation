@@ -16,7 +16,7 @@ This project is developed as part of **Assignment** to demonstrate End-to-End Te
 - ✅ Clicked on a **product** and verified redirection to the **product detail page**
 - ✅ Created **Custom Commands** for reusable test steps (e.g. login)
 - ✅ Implemented **Page Object Model (POM)** for each page
-- ✅**Additional Learning: ** generate report of test execution using mochawesome
+- ✅**Additional Learning:** generate report of test execution using mochawesome
 
 ---
 
