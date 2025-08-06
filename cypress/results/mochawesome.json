@@ -1,0 +1,143 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-08-03T14:05:44.228Z",
+    "end": "2025-08-03T14:05:54.031Z",
+    "duration": 9803,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "37ff66cf-5a62-46f4-9dae-15ad7a399419",
+      "title": "",
+      "fullFile": "cypress\\e2e\\saucedemo.cy.js",
+      "file": "cypress\\e2e\\saucedemo.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "963b37a1-89fa-49a3-a09b-8d0a019056ae",
+          "title": "Sauce Demo Automation Test Suite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should display an error message for invalid login credentials",
+              "fullTitle": "Sauce Demo Automation Test Suite should display an error message for invalid login credentials",
+              "timedOut": null,
+              "duration": 5635,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Use the page object methods to interact with elements\nloginPage.typeUsername('wrong_user');\nloginPage.typePassword('wrong_password');\nloginPage.clickLogin();\n// Verify the error message\nloginPage.errorMessage().should('be.visible');\nloginPage.errorMessage().should('contain', 'Epic sadface: Username and password do not match any user in this service');",
+              "err": {},
+              "uuid": "211a66c7-1ea9-4f86-92b9-5a854766cea5",
+              "parentUUID": "963b37a1-89fa-49a3-a09b-8d0a019056ae",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should successfully login and land on the home page",
+              "fullTitle": "Sauce Demo Automation Test Suite should successfully login and land on the home page",
+              "timedOut": null,
+              "duration": 2447,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Use the custom command for login\ncy.login('standard_user', 'secret_sauce');\n// Verify user is on the home page using POM method\nhomePage.verifyHomePage();",
+              "err": {},
+              "uuid": "37b1f181-a03c-4797-b8ed-a49e6b515fd5",
+              "parentUUID": "963b37a1-89fa-49a3-a09b-8d0a019056ae",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should navigate to the product page after clicking on a product",
+              "fullTitle": "Sauce Demo Automation Test Suite should navigate to the product page after clicking on a product",
+              "timedOut": null,
+              "duration": 1451,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const productName = 'Sauce Labs Backpack';\n// Use the custom command for login\ncy.login('standard_user', 'secret_sauce');\n// Click on the specific product using POM method\nhomePage.clickProduct(productName);\n// Verify that the browser is on the product page using POM method\nproductPage.verifyProductPage(productName);",
+              "err": {},
+              "uuid": "4b1392dd-ad40-413c-adc2-2776439f4c97",
+              "parentUUID": "963b37a1-89fa-49a3-a09b-8d0a019056ae",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "211a66c7-1ea9-4f86-92b9-5a854766cea5",
+            "37b1f181-a03c-4797-b8ed-a49e6b515fd5",
+            "4b1392dd-ad40-413c-adc2-2776439f4c97"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 9533,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
